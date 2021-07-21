@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "scripts": {
+    "server": "node server.js"
+  },
+  "name": "kacatka",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

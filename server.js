@@ -9,12 +9,12 @@ let rand = require('./rand')
 
 http.createServer(async function (req, res) {
 
-  try {
-      await router(req, res)
-  } catch (e) {
-    console.warn(e.code, e.message)
+  try { // try - попробовать - пробуем какой-то код
+    await router(req, res)
+  } catch (e) { // catch - поймать - "ловим" сервер, чтобы не "упал"
+    console.warn(e.code, e.message) // смотрим в консоли что не так
     res.writeHead( 520, {'Content-Type': 'text/html; charset=utf-8' } );
-    res.end(e.message)
+    res.end(e.message) // выдаём ответ клиенту (можно изменить на что-то вроде "сервер временно недоступен")
   }
 
 

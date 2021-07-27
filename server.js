@@ -18,8 +18,6 @@ http.createServer(async function (req, res) {
   }
 
 
-}).listen(PORT, function() {
-  console.log(`server start at port ${PORT}`);
+}).listen(PORT, () => {
+  console.log(`Server is listening at ${HOST}:${PORT}`);
 });
-
-console.log(`Backend Server started at ${HOST}:${PORT}`)

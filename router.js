@@ -1,5 +1,5 @@
-let fs = require('fs');
-let rand = require('./rand');
+let fs = require('fs')
+let rand = require('./rand')
 
 let router = async (req, res) => {
 
@@ -14,6 +14,7 @@ let router = async (req, res) => {
     let randomString = strings[randomNumber]
     return randomString
   }
+
   // используем функцию
   let prophecy = randomProphecy()
 
@@ -21,7 +22,7 @@ let router = async (req, res) => {
   // И "заголовок", что ответ в формате html. Тогда браузер знает что нужно вывести на экран html.
   res.writeHead( 200, { 'Content-Type': 'text/html; charset=utf-8;'} )
   // res.write('KACATKA PROPHECY v0.0.1');
-  res.write('<div color="#93c">'+prophecy+'</div>'); // отправить html текст клиенту
+  res.write(`<div style="color: #609">${prophecy}</div>`) // отправить html текст клиенту
   res.end() // закончить ответ, попробуйте убрать и посмотреть что получится
 
 }

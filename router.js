@@ -10,6 +10,8 @@ let test06 = require('./test06')
 let test07 = require('./test07')
 let test08 = require('./test08')
 let test09 = require('./test09')
+let test10 = require('./test10')
+let test11 = require('./test11')
 
 let router = async (req, res) => {
 
@@ -24,7 +26,7 @@ let router = async (req, res) => {
     out = test03
   }
   else if (req.url === '/4') {
-    out = test04()
+    out = test04
   }
   else if (req.url === '/5') {
     out = test05()
@@ -40,6 +42,12 @@ let router = async (req, res) => {
   }
   else if (req.url === '/9') {
     out = test09()
+  }
+  else if (req.url === '/10') {
+    out = test10()
+  }
+  else if (req.url === '/11') {
+    out = test11()
   }
   else {
     out = 'KACATKA YPOKu v0.0.2'

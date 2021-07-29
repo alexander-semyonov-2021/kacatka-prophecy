@@ -1,7 +1,6 @@
-let foo = (something, whatever, nothing) => {
+let foo = (something, whatever, nothing='') => {
   return 'Hello '+whatever+'!'
 }
-
 
 let result = foo
 
